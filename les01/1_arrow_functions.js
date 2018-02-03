@@ -46,6 +46,8 @@ const length_func_3 = name => name.length;
 // console.log('length_func inline', materials.map(material => material.length));
 
 // "this" example
+// this (aka "the context") is a special keyword inside each function and its value only
+// depends on how the function was called, not how/when/where it was defined. 
 
 this.name = 'My Module'
 
