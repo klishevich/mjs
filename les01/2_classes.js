@@ -13,19 +13,19 @@ ShapeConstructor.prototype.printName = function () {
 var shape1 = new ShapeConstructor('Shape1 Name');
 var shape2 = new ShapeConstructor('Shape2 Name');
 
-// console.log(Object.getOwnPropertyNames(shape1));
-// console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(shape1)));
+console.log(Object.getOwnPropertyNames(shape1));
+console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(shape1)));
 
-// shape1.printName();
-// shape2.printName();
+shape1.printName();
+shape2.printName();
 
 
-// ShapeConstructor.prototype.printName = function () {
-//   console.log('My name is - ', this.name);
-// }
+ShapeConstructor.prototype.printName = function () {
+  console.log('My name is - ', this.name);
+}
 
-// shape1.printName();
-// shape2.printName();
+shape1.printName();
+shape2.printName();
 
 
 // es5 inheritance
@@ -40,7 +40,7 @@ ShapeConstructor.prototype.printName = function () {
   console.log(this.name);
 }
 
-// console.log(Object.getOwnPropertyNames(ShapeConstructor.prototype));
+console.log(Object.getOwnPropertyNames(ShapeConstructor.prototype));
 
 // subclass or Circle Class
 function CircleConstructor(name, radius) {
@@ -50,20 +50,20 @@ function CircleConstructor(name, radius) {
   this.radius = radius;
 }
 
-// console.log(Object.getOwnPropertyNames(CircleConstructor.prototype));
-// console.log(CircleConstructor.prototype.constructor.toString());
+console.log(Object.getOwnPropertyNames(CircleConstructor.prototype));
+console.log(CircleConstructor.prototype.constructor.toString());
 
 // CircleConstructor derives from ShapeConstructor
 // Set prototype for prototype, delegate methods from superclass
 CircleConstructor.prototype = Object.create(ShapeConstructor.prototype);
 
-// console.log(Object.getOwnPropertyNames(CircleConstructor.prototype));
-// console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(CircleConstructor.prototype)));
+console.log(Object.getOwnPropertyNames(CircleConstructor.prototype));
+console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(CircleConstructor.prototype)));
 
-// // Set constructor back
+// Set constructor back
 CircleConstructor.prototype.constructor = CircleConstructor;
-// console.log(Object.getOwnPropertyNames(CircleConstructor.prototype));
-// console.log(CircleConstructor.prototype.constructor.toString());
+console.log(Object.getOwnPropertyNames(CircleConstructor.prototype));
+console.log(CircleConstructor.prototype.constructor.toString());
 
 // Subclass methods.
 CircleConstructor.prototype.printRadius = function () {
@@ -71,16 +71,16 @@ CircleConstructor.prototype.printRadius = function () {
 }
 
 var circle = new CircleConstructor('My Circle', 10);
-// circle.printName();
-// circle.printRadius();
+circle.printName();
+circle.printRadius();
 
 // ES6 classes
 
 
 // Difference between Class and Functions
 // 1. functions are hoisted, classes are not
-// const foo = new Foo(); // ReferenceError
-// class Foo {}
+const foo = new Foo(); // ReferenceError
+class Foo {}
 
 
 // 2. understanding
@@ -98,17 +98,17 @@ class Foo {
     }
 }
 let foo = new Foo(123);
-// console.log(typeof foo);
-// console.log(Object.getOwnPropertyNames(foo));
-// console.log(typeof Object.getPrototypeOf(foo));
-// console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(foo)));
-// console.log(typeof Object.getPrototypeOf(foo).constructor);
-// console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(foo).constructor));
+console.log(typeof foo);
+console.log(Object.getOwnPropertyNames(foo));
+console.log(typeof Object.getPrototypeOf(foo));
+console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(foo)));
+console.log(typeof Object.getPrototypeOf(foo).constructor);
+console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(foo).constructor));
 
-// console.log(Foo === Foo.prototype.constructor);
-// console.log(typeof Foo);
-// console.log(Foo.staticMethod());
-// console.log(foo.prototypeMethod());
+console.log(Foo === Foo.prototype.constructor);
+console.log(typeof Foo);
+console.log(Foo.staticMethod());
+console.log(foo.prototypeMethod());
 
 
 // b. getters and setters
@@ -122,8 +122,8 @@ class MyClass {
 }
 
 let inst = new MyClass();
-// inst.prop = 123;
-// inst.prop;
+inst.prop = 123;
+inst.prop;
 
 
 // c. computed method names
@@ -135,7 +135,7 @@ class Foo2 {
   }
 }
 
-// Foo2.myMethod();
+Foo2.myMethod();
 
 // d. Rewrite Shape and Circle to classes
 
