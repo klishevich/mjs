@@ -1,0 +1,14 @@
+{
+  "name": "les01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1_arrow_functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}
