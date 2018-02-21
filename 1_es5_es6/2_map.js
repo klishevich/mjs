@@ -1,11 +1,10 @@
-// var array1 = [1, 4, 9, 16];
+var array1 = [1, 4, 9, 16];
+function double(x) {
+  return 2*x;
+}
 
-// function double(x) {
-//   return 2*x;
-// }
-
-// var map1 = array1.map(double);
-// console.log(map1);
+var map1 = array1.map(double);
+console.log(map1);
 
 
 // index, array
