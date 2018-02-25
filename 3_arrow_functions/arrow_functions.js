@@ -13,10 +13,10 @@ const easy_func_2 = (data) => {
 
 const easy_func_3 = (data) => ('this is my data: ' + data);
 
-// console.log('easy_func_0', easy_func_1('zero'));
-// console.log('easy_func_1', easy_func_1('one'));
-// console.log('easy_func_2', easy_func_2('two'));
-// console.log('easy_func_3', easy_func_2('three'));
+console.log('easy_func_0', easy_func_1('zero'));
+console.log('easy_func_1', easy_func_1('one'));
+console.log('easy_func_2', easy_func_2('two'));
+console.log('easy_func_3', easy_func_2('three'));
 
 // example 2
 
@@ -39,11 +39,11 @@ const length_func_2 = (name) => (name.length);
 
 const length_func_3 = name => name.length;
 
-// console.log('length_func_0', materials.map(length_func_0));
-// console.log('length_func_1', materials.map(length_func_1));
-// console.log('length_func_2', materials.map(length_func_2));
-// console.log('length_func_3', materials.map(length_func_3));
-// console.log('length_func inline', materials.map(material => material.length));
+console.log('length_func_0', materials.map(length_func_0));
+console.log('length_func_1', materials.map(length_func_1));
+console.log('length_func_2', materials.map(length_func_2));
+console.log('length_func_3', materials.map(length_func_3));
+console.log('length_func inline', materials.map(material => material.length));
 
 // "this" example
 // this (aka "the context") is a special keyword inside each function and its value only
@@ -80,14 +80,14 @@ const someObject = {
   }
 }
 
-// console.log('someObject.printName', someObject.printName());
-// console.log('someObject.printNameArrow', someObject.printNameArrow());
+console.log('someObject.printName', someObject.printName());
+console.log('someObject.printNameArrow', someObject.printNameArrow());
 
-// console.log('someObject.name', someObject.name);
-// someObject.setTM();
-// someObject.setTM2();
-// someObject.setTM3();
-// someObject.setTMArrow();
+console.log('someObject.name', someObject.name);
+someObject.setTM();
+someObject.setTM2();
+someObject.setTM3();
+someObject.setTMArrow();
 
 function OtherObjectConstructor() {
   this.name = 'OtherObject';
@@ -100,6 +100,6 @@ function OtherObjectConstructor() {
 }
 
 const otherObject = new OtherObjectConstructor();
-// otherObject.printName();
-// otherObject.printNameArrow();
+otherObject.printName();
+otherObject.printNameArrow();
 

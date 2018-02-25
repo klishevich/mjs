@@ -1,11 +1,11 @@
-// function sum(...theArgs) {
-//   console.log('theArgs', theArgs);
-//   let res = 0;
-//   theArgs.forEach(el => res += el);
-//   console.log('res', res);
-// }
+function sum(...theArgs) {
+  console.log('theArgs', theArgs);
+  let res = 0;
+  theArgs.forEach(el => res += el);
+  console.log('res', res);
+}
 
-// sum(1, 4, 5);
+sum(1, 4, 5);
 
 
 // with fixed args
