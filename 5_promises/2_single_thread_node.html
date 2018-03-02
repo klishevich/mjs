@@ -12,13 +12,11 @@
     <button>This is a button</button>
     <div id="statusMessage"></div>
     <script>
-        document.getElementById('block')
-        .addEventListener('click', onClick);
+        document.getElementById('block').addEventListener('click', onClick);
         function onClick(event) {
             event.preventDefault();
             setStatusMessage('Blocking...');
-            // Call setTimeout(), so that browser has time to display
-            // status message
+            // Call setTimeout(), so that browser has time to display 'Blocking...' message
             setTimeout(function () {
                 sleep(5000);
                 setStatusMessage('Done');
@@ -30,8 +28,7 @@
         function sleep(milliseconds) {
             var start = Date.now();
             while ((Date.now() - start) < milliseconds) {
-                // let aaa = Date.now();
-                // console.log(123, aaa);
+                // do nothing, just block the only node.js thread
             };
         }
     </script>

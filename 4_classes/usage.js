@@ -4,24 +4,24 @@
 // JS is functional language so better use functions. Functions are first-class citizens
 
 // Do not Classes use Factory functions
-// class Shape {
-//   constructor(name) {
-//     this.name = name;
-//   }
+class Shape {
+  constructor(name) {
+    this.name = name;
+  }
 
-//   printName() {
-//     console.log(this.name);
-//   }
-// }
-// let shape = new Shape('my shape');
-// shape.printName();
+  printName() {
+    console.log(this.name);
+  }
+}
+let shape = new Shape('my shape');
+shape.printName();
 
-// const createShape = (name) => ({
-//   name,
-//   printName: function () { console.log(this.name); }
-// })
-// let shape2 = createShape('other shape');
-// shape2.printName();
+const createShape = (name) => ({
+  name,
+  printName: function () { console.log(this.name); }
+})
+let shape2 = createShape('other shape');
+shape2.printName();
 
 
 // If you use Classes
