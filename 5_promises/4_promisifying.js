@@ -1,4 +1,4 @@
-// # PROMISIFYING
+м// # PROMISIFYING
 // Для чего они нужны. Чтобы упрощать работу с callback-ами и callback hell-ом
 // ## httpGet
 //

@@ -1,10 +1,10 @@
 // WHAT IS CATCH
-// promise.catch(
-//     error => { /* rejection */ });
+promise.catch(
+    error => { /* rejection */ });
 
-// promise.then(
-//     null,
-//     error => { /* rejection */ });
+promise.then(
+    null,
+    error => { /* rejection */ });
 
 function asyncFunc() {
   return new Promise((resolve, reject) => { // (A)

@@ -1,24 +1,24 @@
-// // # My Own Promise Realization
-// class MyPromise {
-//   constructor(func) {
-//     const resolve = (res) => {
-//       this.funcResult = res;
-//     };
-//     func(resolve);
-//   }
+// # My Own Promise Realization
+class MyPromise {
+  constructor(func) {
+    const resolve = (res) => {
+      this.funcResult = res;
+    };
+    func(resolve);
+  }
 
-//   then(func) {
-//     setTimeout(() => func(this.funcResult), 1000);
-//   }
-// }
+  then(func) {
+    setTimeout(() => func(this.funcResult), 1000);
+  }
+}
 
-// function myAsyncFunc() {
-//   return new MyPromise((resolve) => {
-//     setTimeout(() => resolve('DONE2'), 100);
-//   });
-// }
+function myAsyncFunc() {
+  return new MyPromise((resolve) => {
+    setTimeout(() => resolve('DONE2'), 100);
+  });
+}
 
-// myAsyncFunc().then(x => console.log('Result: '+x));
+myAsyncFunc().then(x => console.log('Result: '+x));
 
 
 // # My Own Promise Realization 2
