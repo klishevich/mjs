@@ -1,18 +1,18 @@
-// # CHAINING PROMISES
-// common values
-Promise.resolve(10)
-.then(res => {
-  console.log(res);
-  return 2 * res;
-})
-.then(res => {
-  console.log(res);
-  return 2 * res;
-})
-.then(res => {
-  console.log(res);
-  return 2 * res;
-})
+// // # CHAINING PROMISES
+// // common values
+// Promise.resolve(10)
+// .then(res => {
+//   console.log(res);
+//   return 2 * res;
+// })
+// .then(res => {
+//   console.log(res);
+//   return 2 * res;
+// })
+// .then(res => {
+//   console.log(res);
+//   return 2 * res;
+// })
 
 
 const { readFile } = require('fs');
@@ -30,17 +30,17 @@ function loadFileAsync(fileName) {
     });
 }
 
-loadFileAsync('test1.json')
-.then(result1 => {
-  console.log(1, result1);
-  return loadFileAsync('test2.json');
-})
-.then(result2 => {
-  console.log(2, result2);
-})
-.catch(error => {
-    console.log(error);
-})
+// loadFileAsync('test1.json')
+// .then(result1 => {
+//   console.log(1, result1);
+//   return loadFileAsync('test2.json');
+// })
+// .then(result2 => {
+//   console.log(2, result2);
+// })
+// .catch(error => {
+//     console.log(error);
+// })
 
 
 loadFileAsync('test1.json')
@@ -57,19 +57,23 @@ loadFileAsync('test1.json')
 })
 .catch(error => {
   console.log(4, error);
-  return loadFileAsync('test2.json');
+  return loadFileAsync('catch 1, test2.json');
+})
+.catch(error => {
+  console.log(4, error);
+  return loadFileAsync('catch 2, test2.json');
 })
 .then(res => {
   console.log(5, res);
 })
 
 
-// Promise or Thenable
-const fulfilledThenable = {
-  then(reaction) {
-    reaction('hello');
-  }
-};
-const promise = Promise.resolve(fulfilledThenable);
-console.log(promise instanceof Promise); // true
-promise.then(x => console.log(x)); // hello
+// // Promise or Thenable
+// const fulfilledThenable = {
+//   then(reaction) {
+//     reaction('hello');
+//   }
+// };
+// const promise = Promise.resolve(fulfilledThenable);
+// console.log(promise instanceof Promise); // true
+// promise.then(x => console.log(x)); // hello
