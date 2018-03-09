@@ -61,12 +61,21 @@
 // console.log(object);
 
 // es8 (ECMAScript 2017) Trailing function commas
-// function f1(p) {}
-// function f2(p,) {} 
+// Parameter Definitions equivalent
+// function f1(p) { console.log(p) }
+// function f2(p,) { console.log(p) }
 
-// const f3 = (p) => {};
-// const f4 = (p,) => {};
-// f1();
-// f2();
-// f3();
-// f4();
+// const f3 = (p) => { console.log(p) };
+// const f4 = (p,) => { console.log(p) };
+// f1('f1');
+// f2('f2');
+// f3('f3');
+// f4('f4');
+
+// Funciton calls
+// f1('f1');
+// f1('f1',);
+
+// Illegal
+// f1(,);
+// function f(,) {}
