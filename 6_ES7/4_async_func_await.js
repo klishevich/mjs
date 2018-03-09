@@ -41,10 +41,13 @@
 //     console.log(res1);
 //     const res2 = await setTimeoutP(() => 'trololo2', 1000);
 //     console.log(res2);
+//     throw new Error('some error happened');
 //     return res1 + res2;
 //   }
 //   catch(err) {
-//     console.error(err);
+//     throw new Error('we have error');
 //   }
 // }
-// foo()
+
+// foo().
+// catch((err) => { console.log(err)})
