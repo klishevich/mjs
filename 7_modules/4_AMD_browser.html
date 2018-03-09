@@ -2,8 +2,12 @@
 <html>
 <head>
   <title>AMD Modules</title>
+  <!-- data-main attribute tells require.js to load
+             scripts/main.js after require.js loads. -->
+  <script data-main="4scripts/main" src="4scripts/require.js"></script>
 </head>
 <body>
-
+  <h2>AMD Modules (Require JS)</h2>
+  <button onclick="calcSum()">Click me</button>
 </body>
 </html>
