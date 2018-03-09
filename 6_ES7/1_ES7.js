@@ -1,5 +1,5 @@
 // ES7
-// includes
+// INCLUDES
 
 // const ar = ['a', 'b', 'c'];
 // const check1 = ar.includes('a');
@@ -14,42 +14,6 @@
 // console.log(check2);
 
 
-// // power
+// POWER
 // const res = 10 ** 3;
 // console.log(res);
-
-
-
-// ES8
-// Object.values Object.entries
-
-// const obj = { name: 'Michael', age: 28, male: true }
-
-// Object.values(obj).forEach((value) => {
-//   console.log(value);
-// })
-
-// Object.entries(obj).forEach(([key, value]) => {
-//   console.log(key, value);
-// })
-
-
-
-// console.log('abc'.padStart(10));         // "       abc"
-// console.log('abc'.padStart(10, "foo"));  // "foofoofabc"
-// console.log('abc'.padStart(6,"123465")); // "123abc"
-// console.log('abc'.padStart(8, "0"));     // "00000abc"
-// console.log('abc'.padStart(1));          // "abc"
-
-
-
-// // Object.getOwnPropertyDescriptors
-// const person = {
-//   age: 42,
-//   name: 'John',
-//   female: false
-// };
-
-// const personDescriptors = Object.getOwnPropertyDescriptors(person);
-// console.log(personDescriptors);
-

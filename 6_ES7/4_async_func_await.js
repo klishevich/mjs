@@ -1,4 +1,5 @@
-// // HANDLING RESULTS AND ERRORS OF ASYNCHRONOUS COMPUTATIONS VIA AWAIT 
+'use strict' 
+// HANDLING RESULTS AND ERRORS OF ASYNCHRONOUS COMPUTATIONS VIA AWAIT 
 // const setTimeoutP = require('./exportSetTimeoutP.js');
 // async function foo() {
 //   const res = await setTimeoutP(() => 'trololo2', 1000);

@@ -1,4 +1,5 @@
-// // ASYNC FUNCTIONS ARE STARTED SYNCHRONOUSLY, SETTLED ASYNCHRONOUSLY
+'use strict'
+// ASYNC FUNCTIONS ARE STARTED SYNCHRONOUSLY, SETTLED ASYNCHRONOUSLY
 // async function asyncFunc() {
 //     console.log('asyncFunc()'); // (A)
 //     return 'abc';

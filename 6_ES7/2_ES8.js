@@ -1,3 +1,35 @@
+// ES8
+// OBJECT.VALUES OBJECT.ENTRIES
+
+// const obj = { name: 'Michael', age: 28, male: true }
+
+// Object.values(obj).forEach((value) => {
+//   console.log(value);
+// })
+
+// Object.entries(obj).forEach(([key, value]) => {
+//   console.log(key, value);
+// })
+
+// console.log('abc'.padStart(10));         // "       abc"
+// console.log('abc'.padStart(10, "foo"));  // "foofoofabc"
+// console.log('abc'.padStart(6,"123465")); // "123abc"
+// console.log('abc'.padStart(8, "0"));     // "00000abc"
+// console.log('abc'.padStart(1));          // "abc"
+
+
+
+// DESCRIPTORS Object.getOwnPropertyDescriptors
+// const person = {
+//   age: 42,
+//   name: 'John',
+//   female: false
+// };
+
+// const personDescriptors = Object.getOwnPropertyDescriptors(person);
+// console.log(personDescriptors);
+
+
 // // Whereas the Object.assign() method will only copy enumerable and own properties 
 // // create shallow copy
 // const personCopy = Object.create(
@@ -10,7 +42,7 @@
 
 
 
-// Trailing commas
+// TRAILING COMMAS
 // in arrays
 // var arr = [1, 2, 3, ];
 // console.log(arr.length); // 3
@@ -19,7 +51,7 @@
 // console.log(arr.length); // 5
 
 
-// ES5
+// es5
 // var object = { 
 //   foo: "bar", 
 //   baz: "qwerty",
@@ -28,7 +60,7 @@
 
 // console.log(object);
 
-// // ECMAScript 2017 Trailing function commas
+// es8 (ECMAScript 2017) Trailing function commas
 // function f1(p) {}
 // function f2(p,) {} 
 
