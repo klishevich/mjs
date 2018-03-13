@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ES6 modules in browser</title>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <h1>ES6 modules in browser (only with NGINX)</h1>
+  <div>
+    <button onclick="calcSum()">Sum</button>
+    <div id="sum"></div>
+  </div>
+  <div>
+    <button onclick="console.log(myOtherModuleInstance.hello())">myOtherModuleInstance.hello</button>
+  </div>
+  <div>
+    <button onclick="console.log(myOtherModuleInstance.bye())">myOtherModuleInstance.bye</button>
+  </div>
+  <div>
+    <button onclick="console.log(join())">join</button>
+  </div>
+</body>
+</html>

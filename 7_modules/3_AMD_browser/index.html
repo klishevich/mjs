@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AMD Modules</title>
+  <!-- data-main attribute tells require.js to load
+             scripts/main.js after require.js loads. -->
+  <script data-main="scripts/main" src="scripts/require.js"></script>
+</head>
+<body>
+  <h2>AMD Modules (Require JS)</h2>
+  <div>
+    <button onclick="calcSum()">Sum</button>
+    <div id="sum"></div>
+  </div>
+  <div>
+    <button onclick="console.log(myOtherModuleInstance.hello())">myOtherModuleInstance.hello</button>
+  </div>
+  <div>
+    <button onclick="console.log(myOtherModuleInstance.bye())">myOtherModuleInstance.bye</button>
+  </div>
+  <div>
+    <button onclick="console.log(join())">join</button>
+  </div>
+</body>
+</html>
