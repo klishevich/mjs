@@ -1,4 +1,4 @@
-import { sum } from './sum.js';
+import sum from './sum.js';
 function calcSum() {
   const res = sum(1,2);
   console.log(res);
@@ -6,12 +6,12 @@ function calcSum() {
 window.calcSum = calcSum;
 
 
-import myOtherModule from './myClassModule.js'
-myOtherModuleInstance = new myOtherModule();
+import myOtherModule from './my-class-module.js'
+const myOtherModuleInstance = new myOtherModule();
 window.myOtherModuleInstance = myOtherModuleInstance;
 
 
-import _ from 'lodash';
+import _ from '../node_modules/lodash/index.js';
 function join() {
   const res = _.join(['Lodash', 'Join'], ' ');
   return res;
