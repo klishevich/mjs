@@ -28,6 +28,9 @@ function MyButtonAlaReactConstructor(name) {
   this.handleClick = function () {
     console.log(this.name);
   }
+  // this.handleClick = ()  => {
+  //   console.log(this.name);
+  // }
   this.render = function () {
     return {
         type: 'button',
