@@ -108,19 +108,19 @@ function* myGeneratorAsyncFetchJson(url) {
 
 const gen = myGeneratorAsyncFetchJson('http://api.icndb.com/jokes/random');
 gen.next().value
-  .then((res) => gen.next(res).value)
+  .then(res => gen.next(res).value)
   .then(res => { console.log(res); })
 
 // BETTER VARIANT
-const fetch = require('node-fetch');
-function myAsyncFetchJson(url, generatorFunc) {
+const asyncFuncCreator = generatorFunc => url => {
   const gen = generatorFunc(url);
   gen.next().value
-    .then((res) => gen.next(res).value)
+    .then(res => gen.next(res).value)
     .then(res => { console.log(res); })
 }
 
-myAsyncFetchJson('http://api.icndb.com/jokes/random', function* (url) {
+const fetch = require('node-fetch');
+const fetchJson = asyncFuncCreator(function* (url) {
   try {
     let request = yield fetch(url);
     let text = yield request.text();
@@ -130,13 +130,15 @@ myAsyncFetchJson('http://api.icndb.com/jokes/random', function* (url) {
   }
 })
 
-// ASYNC/AWAIT
+fetchJson('http://api.icndb.com/jokes/random')
+
+// COMPARE WITH ASYNC/AWAIT
 const fetch = require('node-fetch');
-async function fetchJson(url) {
+const fetchJson = async (url) => {
   try {
     let request = await fetch(url);
     let text = await request.text();
-    return JSON.parse(text);
+    return text;
   }
   catch (error) {
     console.log(`ERROR: ${error.stack}`);
