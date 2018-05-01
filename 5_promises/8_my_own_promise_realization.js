@@ -1,10 +1,12 @@
 // # My Own Promise Realization
 class MyPromise {
   constructor(func) {
-    const resolve = (res) => {
-      this.funcResult = res;
-    };
-    func(resolve);
+    this.resolve = this.resolve.bind(this);
+    func(this.resolve);
+  }
+
+  resolve(res) {
+    this.funcResult = res;
   }
 
   then(func) {
@@ -21,27 +23,27 @@ function myAsyncFunc() {
 myAsyncFunc().then(x => console.log('Result: '+x));
 
 
-// # My Own Promise Realization 2
-const EventEmitter = require('events');
-class MyPromise2 extends EventEmitter {
-  constructor(func) {
-    super();
-    const resolve = (res) => {
-      this.funcResult = res;
-      this.emit('okey');
-    };
-    func(resolve);
-  }
+// // # My Own Promise Realization 2
+// const EventEmitter = require('events');
+// class MyPromise2 extends EventEmitter {
+//   constructor(func) {
+//     super();
+//     const resolve = (res) => {
+//       this.funcResult = res;
+//       this.emit('okey');
+//     };
+//     func(resolve);
+//   }
 
-  then(func) {
-    this.on('okey', () => func(this.funcResult));
-  }
-}
+//   then(func) {
+//     this.on('okey', () => func(this.funcResult));
+//   }
+// }
 
-function myAsyncFunc2() {
-  return new MyPromise2((resolve) => {
-    setTimeout(() => resolve('DONE2'), 2000);
-  });
-}
+// function myAsyncFunc2() {
+//   return new MyPromise2((resolve) => {
+//     setTimeout(() => resolve('DONE2'), 2000);
+//   });
+// }
 
-myAsyncFunc2().then(x => console.log('Result: '+x));
+// myAsyncFunc2().then(x => console.log('Result: '+x));
