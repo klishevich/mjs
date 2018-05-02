@@ -1,4 +1,4 @@
-import babelPolyfill from 'babel-polyfill';
+// import babelPolyfill from 'babel-polyfill';
 
 import _ from 'lodash';
 import sum from '../lib/libSum.js';
@@ -29,9 +29,9 @@ function getJoke() {
   .catch((error) => {
     console.log(error);
   })
-  .finally(() => {
-    console.log('ha-ha-ha')
-  });
+  // .finally(() => { // Need Polyfill
+  //   console.log('ha-ha-ha')
+  // });
 }
 getJoke();
 
@@ -54,9 +54,10 @@ momentCheck();
 function objVal() {
   const obj = { name: 'Michael', age: 28, male: true }
 
-  Object.values(obj).forEach((value) => {
-    console.log(value);
-  })
+  // // Need Polyfill
+  // Object.values(obj).forEach((value) => {
+  //   console.log(value);
+  // })
 }
 
 objVal();
