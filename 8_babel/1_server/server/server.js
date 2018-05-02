@@ -1,4 +1,6 @@
 // import babelPolyfill from 'babel-polyfill';
+import { coreJsFinally } from 'core-js/fn/promise/finally';
+import { coreJsObjectValues } from 'core-js/fn/object/values';
 
 import _ from 'lodash';
 import sum from '../lib/libSum.js';
@@ -29,9 +31,9 @@ function getJoke() {
   .catch((error) => {
     console.log(error);
   })
-  // .finally(() => { // Need Polyfill
-  //   console.log('ha-ha-ha')
-  // });
+  .finally(() => { // Need Polyfill
+    console.log('ha-ha-ha')
+  });
 }
 getJoke();
 
@@ -54,10 +56,10 @@ momentCheck();
 function objVal() {
   const obj = { name: 'Michael', age: 28, male: true }
 
-  // // Need Polyfill
-  // Object.values(obj).forEach((value) => {
-  //   console.log(value);
-  // })
+  // Need Polyfill
+  Object.values(obj).forEach((value) => {
+    console.log(value);
+  })
 }
 
 objVal();

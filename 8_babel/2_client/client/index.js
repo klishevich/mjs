@@ -1,7 +1,7 @@
-// import babelPolyfill from 'babel-polyfill';
+import babelPolyfill from 'babel-polyfill';
 
-import _ from 'lodash';
 import sum from '../lib/libSum.js';
+import _ from 'lodash';
 import axios from 'axios';
 import moment from 'moment';
 

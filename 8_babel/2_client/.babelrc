@@ -1,9 +1,3 @@
 {
-  "presets": [
-    ["env", {
-      "targets": {
-        "opera": "12"
-      }
-    }]
-  ]
+  "presets": ["es2015"]
 }

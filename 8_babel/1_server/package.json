@@ -1,5 +1,5 @@
 {
-  "name": "6_ES6_modules_webpack",
+  "name": "8_babel_server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,15 +14,14 @@
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-exponentiation-operator": "^6.24.1",
-    "rimraf": "^2.6.2",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11"
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "core-js": "^2.5.5",
     "lodash": "^4.17.5",
     "moment": "^2.21.0"
   }
