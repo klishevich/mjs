@@ -3,7 +3,7 @@ import { coreJsFinally } from 'core-js/fn/promise/finally';
 import { coreJsObjectValues } from 'core-js/fn/object/values';
 
 import _ from 'lodash';
-import sum from '../lib/libSum.js';
+import sum from './lib/libSum.js';
 import axios from 'axios';
 import moment from 'moment';
 
